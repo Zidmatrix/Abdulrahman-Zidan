@@ -1,21 +1,46 @@
-# Abdulrahman Zidan — Premium Portfolio
+# Abdulrahman Zidan — Premium Interactive Portfolio
 
-Interactive personal brand portfolio for U.S. real estate sales and lead management.
+A cinematic, editorial personal brand portfolio for U.S. real estate sales operations.
 
-## Roles
-- Real Estate Cold Caller
-- Lead Manager
-- Appointment Setter
-- Virtual Assistant
+## Positioning
+Real Estate Cold Caller • Lead Manager • Appointment Setter • Virtual Assistant
+
+## Experience architecture
+Content is data-driven in `data/portfolio.ts`. Add future companies, roles, services, tools and strengths there without rebuilding the page structure.
 
 ## Stack
-Next.js 16 / React 19 / TypeScript / Tailwind CSS 4.3 / GSAP / Lenis / Motion / Three.js / Lucide.
+- Next.js 16.3.7 / React 19.3 / TypeScript
+- Tailwind CSS 4
+- Three.js WebGL hero scene
+- GSAP + ScrollTrigger for cinematic scroll choreography
+- Lenis for smooth native scrolling
+- Motion for React micro-interactions and transitions
+- Lucide icons
+- GitHub Actions + GitHub Pages static export
 
-## GitHub Pages
-The project uses Next.js static export with the repository base path:
-`/Abdulrahman-Zidan`
+## Included interactions
+- Interactive WebGL hero
+- Scroll-driven motion
+- Responsive mobile navigation
+- Command palette with Ctrl/Cmd + K
+- Interactive experience switcher
+- Motion-powered service and proof cards
+- Native on-site video modal
+- Voice introduction link
+- Reduced-motion accessibility mode
+- SEO metadata, sitemap, robots and web manifest
 
-Add the final introduction video as `public/intro.mp4`. The on-site player is already wired.
+## Local development
+npm install
+npm run dev
 
-## Next content pass
-Replace placeholder experience/proof data with verified company names, dates, achievements and tools. Add CV PDF, profile image and final intro video when ready.
+## Production
+npm run build
+
+GitHub Pages is configured through `.github/workflows/deploy.yml` and Next.js static export.
+
+## Assets
+Add the final self-introduction video as `public/intro.mp4`. Add the verified CV PDF as `public/Abdulrahman-Zidan-CV.pdf` when ready.
+
+## Live target
+https://zidmatrix.github.io/Abdulrahman-Zidan/
