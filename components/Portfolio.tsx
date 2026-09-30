@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { ArrowDownRight, ArrowUpRight, Check, ChevronRight, Command, Headphones, Linkedin, Mail, Menu, Play, Search, X } from "lucide-react";
 import Scene from "./Scene";
-import { experience, process, profile, proof, services, strengths, tools } from "@/data/portfolio";
+import { experience, process, profile, proof, services, strengths, tools } from "../data/portfolio";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio(){
