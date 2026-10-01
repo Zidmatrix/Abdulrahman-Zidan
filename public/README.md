@@ -1,7 +1,11 @@
 # Portfolio assets
 
-Add the final introduction video as `public/intro.mp4`.
+Place the final self-introduction video here:
 
-The website already uses an in-site HTML5 player at `/Abdulrahman-Zidan/`.
+`public/intro.mp4`
 
-Add the verified CV PDF as `public/Abdulrahman-Zidan-CV.pdf` when ready.
+Place the verified CV PDF here:
+
+`public/Abdulrahman-Zidan-CV.pdf`
+
+No separate voice-note asset is required; the portfolio uses the video as the main introduction.
