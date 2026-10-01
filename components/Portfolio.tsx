@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -325,7 +324,7 @@ export default function Portfolio() {
 
           <div className="service-grid">
             {services.map((service, index) => (
-              <motion.article
+              <article
                 key={service.number}
                 className={
                   activeService === index ? "service active tilt-card" : "service tilt-card"
@@ -333,8 +332,6 @@ export default function Portfolio() {
                 onMouseEnter={() => setActiveService(index)}
                 onPointerMove={(event) => tilt(event.currentTarget, event)}
                 onPointerLeave={(event) => resetTilt(event.currentTarget)}
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 260, damping: 22 }}
               >
                 <div className="card-glow" />
                 <div className="service-top">
@@ -349,7 +346,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <ArrowUpRight className="service-arrow" />
-              </motion.article>
+              </article>
             ))}
           </div>
         </section>
@@ -410,14 +407,10 @@ export default function Portfolio() {
               ))}
             </div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
+            
+              <div
                 key={activeExperience.role + activeExperience.company}
-                className="experience-detail"
-                initial={{ opacity: 0, x: 25 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -25 }}
-                transition={{ duration: 0.35 }}
+                className="experience-detail experience-detail-animate"
               >
                 <div className="detail-meta">
                   <span>{activeExperience.period}</span>
@@ -446,8 +439,8 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
         </section>
 
@@ -467,18 +460,17 @@ export default function Portfolio() {
 
             <div className="proof-cards">
               {proof.map((item) => (
-                <motion.div
+                <div
                   key={item.label}
                   className="proof-card tilt-card"
                   onPointerMove={(event) => tilt(event.currentTarget, event)}
                   onPointerLeave={(event) => resetTilt(event.currentTarget)}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="card-glow" />
                   <strong>{item.value}</strong>
                   <span>{item.label}</span>
                   <p>{item.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -512,13 +504,11 @@ export default function Portfolio() {
 
             <div className="tool-cloud">
               {tools.map((tool, index) => (
-                <motion.span
+                <span
                   key={tool}
-                  whileHover={{ y: -6, borderColor: "#c9a86a", color: "#f1eee7" }}
-                  transition={{ type: "spring", stiffness: 400 }}
                 >
                   {String(index + 1).padStart(2, "0")} / {tool}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>
@@ -598,20 +588,13 @@ export default function Portfolio() {
         <a href="#top">BACK TO TOP ↑</a>
       </footer>
 
-      <AnimatePresence>
-        {commandOpen && (
-          <motion.div
+      {commandOpen && (
+          <div
             className="overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             onMouseDown={() => setCommandOpen(false)}
           >
-            <motion.div
+            <div
               className="command"
-              initial={{ y: 20, scale: 0.98 }}
-              animate={{ y: 0, scale: 1 }}
-              exit={{ y: 10, scale: 0.98 }}
               onMouseDown={(event) => event.stopPropagation()}
             >
               <div className="command-search">
@@ -652,18 +635,14 @@ export default function Portfolio() {
                 <span>Open CV</span>
                 <ArrowUpRight size={14} />
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
 
-      <AnimatePresence>
-        {videoOpen && (
-          <motion.div
+      {videoOpen && (
+          <div
             className="video-modal"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             role="dialog"
             aria-modal="true"
             aria-label="Introduction video"
@@ -690,9 +669,9 @@ export default function Portfolio() {
                 Your browser does not support video playback.
               </video>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 }
