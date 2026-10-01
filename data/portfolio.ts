@@ -16,7 +16,9 @@ export const profile = {
     "I work across lead-generation and lead-management environments, with hands-on experience in U.S. real estate and solar. I connect with prospects, qualify opportunities, manage follow-ups and keep pipelines moving.",
   email: "abd3lra7man@gmail.com",
   linkedin: "https://www.linkedin.com/in/abdulrahman-zidan/",
+  telegram: "https://t.me/ZIDAAAAAAAAN",
   cv: "/Abdulrahman-Zidan/Abdulrahman-Zidan-CV.pdf",
+  photo: "/Abdulrahman-Zidan/profile.jpg",
 };
 
 export const services = [
