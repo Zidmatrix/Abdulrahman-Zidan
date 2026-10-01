@@ -279,6 +279,13 @@ export default function Portfolio() {
               </p>
             </div>
 
+            <div className="about-portrait reveal">
+              <div className="portrait-frame">
+                <img src={profile.photo} alt="Abdulrahman Zidan" />
+                <span>ABDULRAHMAN ZIDAN / SALES</span>
+              </div>
+            </div>
+
             <div className="about-copy reveal">
               <p>
                 I bring 3+ years of U.S. real estate experience into every
@@ -299,8 +306,8 @@ export default function Portfolio() {
                 <a href={profile.linkedin} target="_blank" rel="noreferrer">
                   <Linkedin size={14} /> LinkedIn <ArrowUpRight size={14} />
                 </a>
-                <a href={profile.cv} download>
-                  <ArrowDownRight size={14} /> Download CV
+                <a href={profile.cv} target="_blank" rel="noreferrer">
+                  <ArrowDownRight size={14} /> View CV
                 </a>
               </div>
             </div>
@@ -576,6 +583,9 @@ export default function Portfolio() {
               </a>
               <a href={profile.linkedin} target="_blank" rel="noreferrer">
                 <Linkedin /> LinkedIn <ArrowUpRight />
+              </a>
+              <a href={profile.telegram} target="_blank" rel="noreferrer">
+                Telegram <ArrowUpRight />
               </a>
             </div>
           </div>
