@@ -137,7 +137,7 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const tools = [
-  "GoHighLevel",
+  "GoHighLevel (GHL)",
   "ReadyMode",
   "CallTools",
   "REI Sift",
@@ -162,5 +162,5 @@ export const strengths = [
 export const proof = [
   { value: "3+", label: "Years", text: "U.S. real estate experience" },
   { value: "02", label: "Industries", text: "Real Estate + Solar lead-generation work" },
-  { value: "GHL", label: "CRM", text: "GoHighLevel experience added to the stack" },
+  { value: "US", label: "Market", text: "Remote U.S. sales environment" },
 ];
