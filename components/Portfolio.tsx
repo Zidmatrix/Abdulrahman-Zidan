@@ -559,8 +559,8 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <a href={profile.cv} download className="cv-button magnetic">
-                <ArrowDownRight size={16} /> Open / Download CV
+              <a href={profile.cv} target="_blank" rel="noreferrer" className="cv-button magnetic">
+                <ArrowDownRight size={16} /> View CV
               </a>
             </div>
           </div>
