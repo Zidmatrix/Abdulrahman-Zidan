@@ -123,7 +123,7 @@ export default function Scene() {
         core.rotation.x += 0.0007;
         wire.rotation.copy(core.rotation);
         dots.rotation.y -= 0.0007;
-        renderer?.render(scene, camera);
+        try { renderer?.render(scene, camera); } catch (error) { console.warn("WebGL render stopped:", error); cancelAnimationFrame(raf); }
       };
 
       window.addEventListener("pointermove", onPointer, { passive: true });
