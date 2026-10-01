@@ -125,7 +125,7 @@ export default function Portfolio() {
     document.getElementById(id)?.scrollIntoView({ behavior: "auto", block: "start" });
   };
 
-  const tilt = (element: HTMLDivElement, event: React.PointerEvent) => {
+  const tilt = (element: HTMLElement, event: React.PointerEvent) => {
     const rect = element.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width;
     const y = (event.clientY - rect.top) / rect.height;
@@ -135,7 +135,7 @@ export default function Portfolio() {
     element.style.setProperty("--my", `${y * 100}%`);
   };
 
-  const resetTilt = (element: HTMLDivElement) => {
+  const resetTilt = (element: HTMLElement) => {
     element.style.setProperty("--rx", "0deg");
     element.style.setProperty("--ry", "0deg");
     element.style.setProperty("--mx", "50%");
